@@ -91,7 +91,7 @@ const Skills = () => {
         <div className='grid gap-4 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2'>
             {
                 Skills.map((i, id) => (
-                <div  key={i.id} >
+                <div key={i.id} >
                     <img src = {i.image} alt="Skills" className='m-auto my-3 bg-white p-5 rounded-xl shadow-slate-300 shadow-lg ' />
                 </div>
                 ))

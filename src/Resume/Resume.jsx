@@ -4,6 +4,40 @@ import resumePDF from "../Assets/ahamed.pdf"
 
 const Resume = () => {
 
+    const internship = [
+        {
+            id: 1,
+            title:'Robot Process Automation - Intern',
+            company:'Best Enlist',
+            duration:'September 2020 - October 2020',
+            desc:"I led a team of 5 during my first internship, where we automated payment and checkout processes for an E-commerce product similar to Flipkart and Amazon. Additionally, I optimized social media post scheduling, demonstrating leadership, innovation, and teamwork. This internship marked the beginning of my journey in web development, igniting my enthusiasm for the field. It was a transformative experience that taught me the power of collaborative problem-solving and inspired my commitment to crafting innovative solutions in the world of web development."
+        },
+        {
+            id: 2,
+            title:'Software and UI/UX Development - Intern',
+            company:'Maxffort Technologies',
+            duration:'March 2021 - May 2021',
+            desc:"I'm a goal-oriented and innovative software developer with hands-on experience in UI development gained during a dynamic internship. I actively contributed to web-based software applications, using HTML, CSS, and UI Path to enhance user interfaces. My internship experience instilled in me the importance of user-centric design and efficient interfaces. I'm eager to apply my acquired skills and collaborative mindset to drive impactful software projects and deliver exceptional user experiences that make a lasting impact on users and industries."
+        },
+        {
+            id: 3,
+            title:'FullStack Web Development - Intern',
+            company:'Why Global Services',
+            duration:'April 2023 -  Present',
+            desc:"During my full-stack web development internship, I played a key role in the frontend development of the admin side for the 'Abhis LMS Website.' My responsibilities included designing an intuitive user interface and implementing complex functionalities to streamline the learning management system. This experience allowed me to refine my frontend development skills and reinforced my passion for contributing to innovative web projects. Additionally, I enthusiastically took on various other tasks, such as adjusting alignment and fine-tuning user experiences in several smaller projects. These experiences broadened my skills and taught me the importance of attention to detail in web development. I'm now eager to leverage this expertise in future collaborative development endeavors, creating user-centric and engaging web applications."
+        },
+    ]
+
+    const education = [
+        {
+            id: 1,
+            degree:'B.Tech, Information Technology',
+            institute:'Saveetha University, Chennai',
+            duration:'August 2018 - November 2022',
+            desc:"During my four-year journey pursuing a B.Tech degree in Information Technology was a dynamic period of exploration and growth. I immersed myself in various programming languages and technologies, which paved the way for my subsequent internships and ignited my passion for web development. This experience equipped me with a strong foundation and a commitment to continuous learning in the field of IT and software development."
+        },
+    ]
+
   return (
     <div className='fade-up'>
         <div className='sm:h-20 h-5'></div>
@@ -39,78 +73,38 @@ const Resume = () => {
         </div>
         <div>
             <p className=' text-white text-lg font-bold border-2 border-sky-400 rounded-full w-40 mx-auto sm:my-10 my-5'>Internship</p>
+            
             <div className='grid grid-cols-1 md:grid-cols-2 w-[96%] mx-auto'>
-                <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg'>
-                    
-                    <p className=' text-xl font-bold text-slate-100'>Robot Process Automation - Intern</p>
-                    <p className='font-semibold py-1'>Best Enlist</p> 
-                    <p className='text-sky-300 text-lg font-semibold pb-5'>September 2020 - October 2020</p>
-                    <p className=' text-base'> 
-                        I led a team of 5 during my first internship, where we automated payment and checkout processes
-                        for an E-commerce product similar to Flipkart and Amazon. Additionally, I optimized social media 
-                        post scheduling, demonstrating leadership, innovation, and teamwork. This internship marked the beginning 
-                        of my journey in web development, igniting my enthusiasm for the field. It was a transformative experience 
-                        that taught me the power of collaborative problem-solving and inspired my commitment to crafting innovative 
-                        solutions in the world of web development.
-                    </p>
-                </div>
-                <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg'>
-                    
-                    <p className=' text-xl font-bold text-slate-100'>Software and UI/UX Development - Intern</p>
-                    <p className='font-semibold py-1'>Maxffort Technologies</p> 
-                    <p className='text-sky-300 text-lg font-semibold pb-5'>March 2021 - May 2021</p>
-                    <p className=' text-base'> 
-                        I'm a goal-oriented and innovative software developer with hands-on experience in UI development 
-                        gained during a dynamic internship. I actively contributed to web-based software applications, 
-                        using HTML, CSS, and UI Path to enhance user interfaces. My internship experience instilled in me 
-                        the importance of user-centric design and efficient interfaces. I'm eager to apply my acquired skills 
-                        and collaborative mindset to drive impactful software projects and deliver exceptional user experiences 
-                        that make a lasting impact on users and industries.
-                    </p>
-                </div>
-                <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg'>
-                    
-                    <p className=' text-xl font-bold text-slate-100'>FullStack Web Development - Intern</p>
-                    <p className='font-semibold py-1'>Why Global Services</p> 
-                    <p className='text-sky-300 text-lg font-semibold pb-5'>April 2023 -  Present</p>
-                    <p className=' text-base'> 
-                        During my full-stack web development internship, I played a key role in the frontend development of 
-                        the admin side for the 'Abhis LMS Website.' My responsibilities included designing an intuitive user 
-                        interface and implementing complex functionalities to streamline the learning management system. This 
-                        experience allowed me to refine my frontend development skills and reinforced my passion for contributing 
-                        to innovative web projects.
-
-                        Additionally, I enthusiastically took on various other tasks, such as adjusting alignment and fine-tuning 
-                        user experiences in several smaller projects. These experiences broadened my skills and taught me the importance 
-                        of attention to detail in web development. I'm now eager to leverage this expertise in future collaborative development 
-                        endeavors, creating user-centric and engaging web applications.
-                    </p>
-                </div>
+                {
+                    internship.map((i, id) => (
+                        <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg' key={i.id}>
+                            <p className=' text-xl font-bold text-slate-100'>{i.title}</p>
+                            <p className='font-semibold py-1'>{i.company}</p> 
+                            <p className='text-sky-300 text-lg font-semibold pb-5'>{i.duration}</p>
+                            <p className=' text-base'>{i.desc}</p>
+                        </div>
+                    ))
+                }
+                
             </div>
         </div>
         <div>
             <p className=' text-white text-lg font-bold border-2 border-sky-400 rounded-full w-40 mx-auto my-10'>Education</p>
             <div className='md:w-[66%] w-[95%] mx-auto'>
-                <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg'>
-                    
-                    <p className=' text-xl font-bold text-slate-100'>B.Tech, Information Technology</p>
-                    <p className='font-semibold py-1'>Saveetha University, Chennai</p> 
-                    <p className='text-sky-300 text-lg font-semibold pb-5'>August 2018 - November 2022</p>
-                    <p className=' text-base'> 
-                        During my four-year journey pursuing a B.Tech degree in Information Technology was a dynamic period 
-                        of exploration and growth. I immersed myself in various programming languages and technologies, which 
-                        paved the way for my subsequent internships and ignited my passion for web development. This experience 
-                        equipped me with a strong foundation and a commitment to continuous learning in the field of IT and software development.
-                    </p>
-                </div>
+            {
+                education.map((i, id) => (
+                    <div className='text-white text-left p-4 border-2 border-sky-400 rounded-xl m-4 shadow-sky-300 shadow-lg' key={i.id}>
+                        <p className=' text-xl font-bold text-slate-100'>{i.degree}</p>
+                        <p className='font-semibold py-1'>{i.institute}</p> 
+                        <p className='text-sky-300 text-lg font-semibold pb-5'>{i.duration}</p>
+                        <p className=' text-base'>{i.desc}</p>
+                    </div>
+                ))
+            }
             </div>
         </div>
         
-
-        
-        
         <Outlet/>
-
     </div>
   )
 }
