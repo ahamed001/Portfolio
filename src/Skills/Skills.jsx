@@ -30,56 +30,52 @@ const Skills = () => {
         },
         {
             id:7,
-            image: require('../Assets/Redux.png'),
-        },
-        {
-            id:8,
             image: require('../Assets/MongoDB.png'),
         },
         {
-            id:9,
+            id:8,
             image: require('../Assets/MySQL.png'),
         },
         {
-            id:10,
+            id:9,
             image: require('../Assets/Node.png'),
         },
         {
-            id:11,
+            id:10,
             image: require('../Assets/Express.png'),
         },
         {
-            id:12,
+            id:11,
             image: require('../Assets/Vite.png'),
         },
         {
-            id:13,
+            id:12,
             image: require('../Assets/Python.png'),
         },
         {
-            id:14,
+            id:13,
             image: require('../Assets/Django.png'),
         },
         {
-            id:15,
-            image: require('../Assets/JQuery.png'),
-        },
-        {
-            id:16,
+            id:14,
             image: require('../Assets/JSON.png'),
         },
         {
-            id:17,
+            id:15,
             image: require('../Assets/Git.png'),
         },
         {
-            id:18,
+            id:16,
             image: require('../Assets/Github.png'),
         },
         {
-            id:19,
+            id:17,
             image: require('../Assets/NPM.png'),
-        }
+        },
+        // {
+        //     id:18,
+        //     image: require('../Assets/Redux.png'),
+        // }
     ]
 
   return (
